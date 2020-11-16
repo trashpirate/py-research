@@ -5,7 +5,7 @@ Research modules with functions for data import, plotting, signal processing, et
  `classification.py`
 
 - `logit_regress(X,y,train_idx,...)`
-  Implements logistic regression with crossvalidation using sklearn package. Returns fitted model.
+  \nImplements logistic regression with crossvalidation using sklearn package. Returns fitted model.
   
 - `get_roc(model,testx,testy)`
   Computes ROC curve for logistic regression (or any sklearn) model.
