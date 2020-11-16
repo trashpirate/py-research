@@ -5,6 +5,6 @@ import scipy.io as sio
 import itertools
 
 import sys
-sys.path.insert(0,'/Github/nadina_functions')
+sys.path.insert(0,'/Github/nadlib/py_modules')
 
 import plotting
