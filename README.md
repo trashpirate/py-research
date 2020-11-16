@@ -2,7 +2,7 @@
 Research modules with functions for data import, plotting, signal processing, etc.
 
 **Classification**
- `classification.py`\
+ `classification.py`
 
 - `logit_regress(X,y,train_idx,...)`\
   Implements logistic regression with crossvalidation using sklearn package. Returns fitted model.
@@ -16,7 +16,7 @@ Research modules with functions for data import, plotting, signal processing, et
   Computs confusion matrix for sklearn model.
   
 **Signal Processing**
-  `signal_processing.py`\
+  `signal_processing.py`
   
  - `fill_nans(X)`\
    Interpolates data that includes nans along axis 1.
@@ -24,7 +24,7 @@ Research modules with functions for data import, plotting, signal processing, et
    Computes finite differences over specified lag.
   
 **Statistics Miscellaneous**
-  `stats_misc.py`\
+  `stats_misc.py`
   
  - `curve_fit_ci(popt,pcov,n)`
    Computs confidence intervals of polyfit model.
@@ -32,7 +32,7 @@ Research modules with functions for data import, plotting, signal processing, et
    Saves stats summary to file.
 
 **Read Files**
-  `readfiles.py`\
+  `readfiles.py`
   
 - `isfloat(x)`\
   Tests if input is float.
@@ -46,7 +46,7 @@ Research modules with functions for data import, plotting, signal processing, et
   Reads numerical data from txt file and returns float array.
 
 **Plotting**
- `plotting.py`\
+ `plotting.py`
 
 - Sets defaults for matplotlib.
 - `axisEqual3D(ax)`\
