@@ -12,8 +12,8 @@ import matplotlib.cm as cm
 
 from mpl_toolkits import axes_grid1
 from mpl_toolkits.mplot3d import Axes3D
-from mpl_toolkits.axes_grid1.axes_divider import make_axes_locatable
-from mpl_toolkits.axes_grid1.colorbar import colorbar
+# from mpl_toolkits.axes_grid1.axes_divider import make_axes_locatable
+# from mpl_toolkits.axes_grid1.colorbar import colorbar
 
 from matplotlib.lines import Line2D
 from matplotlib.colors import LogNorm, PowerNorm
@@ -125,7 +125,9 @@ def set_colorcycle(palette, n=5):
 
 def style_boxplot(ax, labels=None, loc=1):
     colors = []
-    for i, artist in enumerate(ax.artists):
+    box_patches = [patch for patch in ax.patches if type(patch) == mpl.patches.PathPatch]
+
+    for i, artist in enumerate(box_patches):
         # Set the linecolor on the artist to the facecolor, and set the facecolor to None
         r, g, b, a = artist.get_facecolor()
         col = (r, g, b, a)
