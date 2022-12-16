@@ -9,9 +9,11 @@ import matplotlib.gridspec as gridspec
 import matplotlib.pyplot as plt
 import matplotlib.figure as fig
 import matplotlib.cm as cm
+import matplotlib.colors as colors
 
 from mpl_toolkits import axes_grid1
 from mpl_toolkits.mplot3d import Axes3D
+
 # from mpl_toolkits.axes_grid1.axes_divider import make_axes_locatable
 # from mpl_toolkits.axes_grid1.colorbar import colorbar
 
