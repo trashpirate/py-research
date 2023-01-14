@@ -4,7 +4,7 @@ Research modules with functions for data import, plotting, signal processing, et
 
 Install package with:
 
-`pip install git+https://github.com/trashpirate/py_research.git`
+`pip install git+https://github.com/trashpirate/py-research.git`
 
 **Classification**
 `classification.py`
