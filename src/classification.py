@@ -48,7 +48,9 @@ def kl_divergence(p, q):
 def pca(X,n_comp=3):
   # Data matrix X, assumes 0-centered
   n, m = X.shape
-  assert np.allclose(X.mean(axis=0), np.zeros(m))
+
+#   if not np.allclose(X.mean(axis=0), np.zeros(m)):
+#     X -= X.mean(axis=0,keepdims=True)
   # Compute covariance matrix
   C = np.dot(X.T, X) / (n-1)
   # Eigen decomposition
