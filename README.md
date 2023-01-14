@@ -1,4 +1,4 @@
-# py-research
+# py_research
 Research modules with functions for data import, plotting, signal processing, etc.
 
 **Classification**
