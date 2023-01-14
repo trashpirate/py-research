@@ -5,7 +5,7 @@ Research modules with functions for data import, plotting, signal processing, et
 Install package with:
 
 1. Clone the repo
-2. Run `pip install py_research` in root directory of repository
+2. Run `pip install --user .` in root directory of repository
 
 **Classification**
 `classification.py`

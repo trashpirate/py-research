@@ -4,7 +4,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="pyresearch",
+    name="py_research",
     version="0.0.1",
     author="Nadina (Zweifel) Oates",
     author_email="nadinaoates@gmail.com",
@@ -14,6 +14,6 @@ setuptools.setup(
     url="https://github.com/trashpirate/py-research",
     project_urls={"Bug Tracker": "https://github.com/trashpirate/py-research/issues"},
     license="MIT",
-    packages=["pyresearch"],
+    packages=["py_research"],
     install_requires=["numpy", "scipy", "scikit-learn", "matplotlib", "seaborn", "cycler"],
 )
