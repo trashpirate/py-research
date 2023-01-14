@@ -1,8 +1,6 @@
 from sklearn.linear_model import LogisticRegressionCV
-from sklearn.metrics import classification_report, confusion_matrix, roc_curve, roc_auc_score
+from sklearn.metrics import confusion_matrix, roc_curve, roc_auc_score
 import numpy as np
-import sys
-import pickle
 
 def logit_regress(X,y,train_idx,regul=1):
 

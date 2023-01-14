@@ -1,9 +1,6 @@
 
 import numpy as np
-from scipy.optimize import curve_fit
 from scipy.stats.distributions import  t
-import pandas as pd
-import csv
 
 
 def curve_fit_ci(popt,pcov,n):
