@@ -1,8 +1,13 @@
 # py_research
+
 Research modules with functions for data import, plotting, signal processing, etc.
 
+Install package with:
+
+`pip install git+https://github.com/trashpirate/py_research.git`
+
 **Classification**
- `classification.py`
+`classification.py`
 
 - `logit_regress(X,y,train_idx,...)`\
   Implements logistic regression with crossvalidation using sklearn package. Returns fitted model.
@@ -14,26 +19,26 @@ Research modules with functions for data import, plotting, signal processing, et
   Computes PCA and returns eigenvalues, eigenvectors, and projections of selected principal components.
 - `show_confusion_matrix(x,y,model,ax)`\
   Computs confusion matrix for sklearn model.
-  
+
 **Signal Processing**
-  `signal_processing.py`
-  
- - `fill_nans(X)`\
-   Interpolates data that includes nans along axis 1.
- - `finite_diff(x,...)`\
-   Computes finite differences over specified lag.
-  
+`signal_processing.py`
+
+- `fill_nans(X)`\
+  Interpolates data that includes nans along axis 1.
+- `finite_diff(x,...)`\
+  Computes finite differences over specified lag.
+
 **Statistics Miscellaneous**
-  `stats_misc.py`
-  
- - `curve_fit_ci(popt,pcov,n)`
-   Computs confidence intervals of polyfit model.
- - `save_summary(fs,..)`
-   Saves stats summary to file.
+`stats_misc.py`
+
+- `curve_fit_ci(popt,pcov,n)`
+  Computs confidence intervals of polyfit model.
+- `save_summary(fs,..)`
+  Saves stats summary to file.
 
 **Read Files**
-  `readfiles.py`
-  
+`readfiles.py`
+
 - `isfloat(x)`\
   Tests if input is float.
 - `isint(x)`\
@@ -46,7 +51,7 @@ Research modules with functions for data import, plotting, signal processing, et
   Reads numerical data from txt file and returns float array.
 
 **Plotting**
- `plotting.py`
+`plotting.py`
 
 - Sets defaults for matplotlib.
 - `axisEqual3D(ax)`\
@@ -69,9 +74,9 @@ Research modules with functions for data import, plotting, signal processing, et
   Plots a grouped bar plot based on multidimensional input X,Y
 - `set_layout(fig,..)`\
   Adjusts figure layout based on given width and height.
-  
+
 **Whiskit Import functions**
- `whiskit_import.py`
+`whiskit_import.py`
 
 - `read_whiskit_data(...)`\
   Reads WHISKiT simulator output from given directory and stores it in .npz and .mat files.
