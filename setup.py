@@ -14,6 +14,6 @@ setuptools.setup(
     url="https://github.com/trashpirate/py-research",
     project_urls={"Bug Tracker": "https://github.com/trashpirate/py-research/issues"},
     license="MIT",
-    packages=["py_research"],
+    packages=["pyresearch"],
     install_requires=["numpy", "scipy", "scikit-learn", "matplotlib", "seaborn", "cycler"],
 )
