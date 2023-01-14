@@ -1,5 +1,5 @@
 [project]
-name = "py-research"
+name = "py_research"
 version = "0.0.1"
 authors = [
   { name="Nadina (Zweifel) Oates", email="nadinaoates@gmail.com" },
@@ -14,5 +14,5 @@ classifiers = [
 ]
 
 [project.urls]
-"Homepage" = "https://github.com/trashpirate/py-research.git"
-"Bug Tracker" = "https://github.com/trashpirate/py-research.git/issues"
+"Homepage" = "https://github.com/trashpirate/py_research.git"
+"Bug Tracker" = "https://github.com/trashpirate/py_research.git/issues"
