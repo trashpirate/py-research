@@ -3,29 +3,32 @@ import numpy as np
 
 class EigenPCA():
 
+    eigen_vals = None
+    eigen_vecs = None
+    loadiings = None
+    variance_explained = None
+    cov_matrix = None
+    threshold = None
+    mu = None
+
     def __init__(self, threshold = 0.9):
-        self.eigen_vals = None
-        self.eigen_vecs = None
-        self.loadiings = None
-        self.variance_explained = None
-        self.cov_matrix = None
         self.threshold = threshold
 
-    def fit(self, X):
+    def fit(self, X: float):
         
         # input: X = data matrix with (n = n_samples, m = n_variables)
         n, m = X.shape
         self.mu = X.mean(axis=0, keepdims = True)
-        
+
         # center the data
-        X -= self.mu
+        X_c = X - self.mu
 
         # compute covariance matrix
-        C = np.cov(X.T) #np.dot(X.T, X) / (n-1)
+        C = np.dot(X_c.T, X_c) / (n-1)
         self.cov_matrix = C
         
         # eigen decomposition
-        eigen_vals, eigen_vecs = np.linalg.eig(C)
+        eigen_vals, eigen_vecs = np.linalg.eigh(C)
         
 
         # sort by eigen values
@@ -50,10 +53,10 @@ class EigenPCA():
     def project(self, X):
         
         # project data onto eigenvectors
-        X -= self.mu
+        X_c = X - self.mu
         P = self.eigen_vecs[:,:self.n_comp]
 
-        X_proj = np.dot(X, P)
+        X_proj = np.dot(X_c, P)
         return X_proj
 
     def reconstruct(self, X_proj):
