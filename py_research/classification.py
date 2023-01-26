@@ -42,20 +42,6 @@ def kl_divergence(p, q):
     return np.sum(np.where(p > 1e-9, p * np.log(p / q), 0))
 
 
-
-def pca(X,n_comp=3):
-  # Data matrix X, assumes 0-centered
-  n, m = X.shape
-
-#   if not np.allclose(X.mean(axis=0), np.zeros(m)):
-#     X -= X.mean(axis=0,keepdims=True)
-  # Compute covariance matrix
-  C = np.dot(X.T, X) / (n-1)
-  # Eigen decomposition
-  eigen_vals, eigen_vecs = np.linalg.eig(C)
-  
-  return eigen_vals.T, eigen_vecs, (eigen_vecs.T[:][:n_comp])
-
 def show_confusion_matrix(x,y,model,ax):
     cm = confusion_matrix(y, model.predict(x))
     ax.imshow(cm)
