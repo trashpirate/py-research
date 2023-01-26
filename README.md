@@ -6,6 +6,7 @@ Install package with:
 
 1. Clone the repo
 2. Run `pip install --user .` in root directory of repository
+3. Then import module with: `import py_research`
 
 **Principal Component Analysis**
 - `EignPCA(treshold=x)`\
