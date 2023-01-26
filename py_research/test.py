@@ -4,7 +4,13 @@ from pca import EigenPCA
 import numpy as np
 import sklearn.decomposition
 
-X = np.random.random((100,30))
+from scipy.misc import ascent
+
+# the underlying signal is a sinusoidally modulated image
+img = ascent()
+
+# (observations, features) matrix
+X = img.reshape(img.shape[0],-1)
 
 pca_model = EigenPCA(threshold=1.0)
 
