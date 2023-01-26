@@ -7,6 +7,13 @@ Install package with:
 1. Clone the repo
 2. Run `pip install --user .` in root directory of repository
 
+**Principal Component Analysis**
+- `EignPCA(treshold=x)`\
+  Class to compute PCA and returns eigenvalues, eigenvectors, and projections of selected principal components.
+  - `fit(X)`\
+  - `project(X)`\
+  - `reconstruct(X)`\
+  
 **Classification**
 `classification.py`
 
@@ -16,8 +23,6 @@ Install package with:
   Computes ROC curve for logistic regression (or any sklearn) model.
 - `kl_divergence(p,q)`\
   Computes Kullback-Leibler Divergence of input histograms.
-- `pca(X,...)`\
-  Computes PCA and returns eigenvalues, eigenvectors, and projections of selected principal components.
 - `show_confusion_matrix(x,y,model,ax)`\
   Computs confusion matrix for sklearn model.
 
