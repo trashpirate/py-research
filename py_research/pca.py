@@ -21,7 +21,7 @@ class EigenPCA():
         X -= self.mu
 
         # compute covariance matrix
-        C = np.dot(X.T, X) / (n-1)
+        C = np.cov(X.T) #np.dot(X.T, X) / (n-1)
         self.cov_matrix = C
         
         # eigen decomposition
