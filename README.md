@@ -10,9 +10,10 @@ Install package with:
 **Principal Component Analysis**
 - `EignPCA(treshold=x)`\
   Class to compute PCA and returns eigenvalues, eigenvectors, and projections of selected principal components.
-  - `fit(X)`
-  - `project(X)`
-  - `reconstruct(X)`
+  - `fit(X)` to obtain the eigenvalues and eigenvectors
+  - `project(X)` to project the data onto the eigenvectors
+  - `reconstruct(X)` to reconstruct the data from the principal components
+  - `loss(X)` to measure the loss for the reconstruction
   
 **Classification**
 `classification.py`
