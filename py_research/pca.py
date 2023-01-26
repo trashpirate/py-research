@@ -66,3 +66,15 @@ class EigenPCA():
         X_rec = np.dot(X_proj, P.T) + self.mu
         return X_rec
         
+    def loss(self,X):
+        
+        # center data
+        X_c = X - self.mu
+        # projection matrix
+        P = self.eigen_vecs[:,:self.n_comp]
+
+        # reconstruction and loss
+        X_rec = np.dot(np.dot(X_c, P), P.T) + self.mu
+        loss = np.sum((X - X_rec) ** 2, axis=1).mean()
+
+        return loss
