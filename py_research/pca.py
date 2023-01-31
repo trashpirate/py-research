@@ -46,7 +46,7 @@ class EigenPCA():
         if self.threshold >= 1.0:
             self.n_comp = m
         else:
-            self.n_comp = np.argwhere(self.cumvar_explained > self.threshold)[0][0]
+            self.n_comp = np.argwhere(self.cumvar_explained > self.threshold)[0][0] + 1
 
         return self.eigen_vals, self.eigen_vecs
 
