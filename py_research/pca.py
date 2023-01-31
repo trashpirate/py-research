@@ -69,12 +69,13 @@ class EigenPCA():
     def filter(self, Xi):
         
         # center
-        Xi_c = Xi - Xi.mean()
+        mui = Xi.mean(axis=0, keepdims = True)
+        Xi_c = Xi - mui
 
         # filter data through PCA
         P = self.eigen_vecs[:,:self.n_comp]
         Xi_c_proj = np.dot(Xi_c, P)
-        Xi_rec = np.dot(Xi_c_proj, P.T) + Xi.mean()
+        Xi_rec = np.dot(Xi_c_proj, P.T) + mui
 
         return Xi_rec
         
