@@ -68,7 +68,7 @@ class EigenPCA():
         
     def loss(self,X,X_rec=None):
         
-        if X_rec != None:
+        if X_rec is not None:
             # center data
             X_c = X - self.mu
             # projection matrix
@@ -76,7 +76,7 @@ class EigenPCA():
 
             # reconstruction and loss
             X_rec = np.dot(np.dot(X_c, P), P.T) + self.mu
-            
+
         loss = np.sum((X - X_rec) ** 2, axis=1).mean()
 
         return loss
