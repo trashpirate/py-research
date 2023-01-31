@@ -65,6 +65,18 @@ class EigenPCA():
         P = self.eigen_vecs[:,:self.n_comp]
         X_rec = np.dot(X_proj, P.T) + self.mu
         return X_rec
+
+    def filter(self, Xi):
+        
+        # center
+        Xi_c = Xi - self.mu
+
+        # filter data through PCA
+        P = self.eigen_vecs[:,:self.n_comp]
+        Xi_c_proj = np.dot(Xi_c, P)
+        Xi_rec = np.dot(Xi_c_proj, P.T) + self.mu
+        
+        return Xi_rec
         
     def loss(self,X,X_rec=None):
         
